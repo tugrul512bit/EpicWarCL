@@ -1,0 +1,5 @@
+Performer: Quatuor Quatre Saisons
+
+Licence: https://creativecommons.org/licenses/by/3.0/
+
+Starting position: second=33, milisecond=0

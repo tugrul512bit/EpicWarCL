@@ -96,33 +96,7 @@ namespace EpicWarCL
 
         public Form1()
         {
-            {
-                Cekirdekler.ClNumberCruncher cr = new Cekirdekler.ClNumberCruncher(
-    Cekirdekler.AcceleratorType.GPU, @"
 
-                static int aa;
-                __kernel void hello(__global char * arr)
-                {
-                    int i=get_global_id(0);
-                    arr[i]=i;
-                }
-
-                __kernel void test(const __global char * arr)
-                {
-                    int i=get_global_id(0);
-                
-                }
-            ");
-
-                Cekirdekler.ClArrays.ClArray<byte> array = new Cekirdekler.ClArrays.ClArray<byte>(1000);
-
-                array.compute(cr, 1, "hello", 1000, 100);
-                array.compute(cr, 1, "test", 1000, 100);
-                Console.WriteLine("gpu");
-                Console.WriteLine((int)array[5]);
-                Console.ReadKey();
-                this.Close();
-            }
 
             InitializeComponent();
 
